@@ -5,7 +5,7 @@
         <service>
             <name>MONGODB</name>
             <displayName>MongoDB</displayName>
-            <comment>The intermediate database in your lambda stack</comment>
+            <comment>MongoDB is a cross-platform document-oriented database.</comment>
             <version>3.0</version>
             <components>
                     <component>
