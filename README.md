@@ -17,7 +17,7 @@ ssh root@ambari.machine
 ####To deploy the Mongo DB, run below
 ```
 cd /var/lib/ambari-server/resources/stacks/HDP/2.2/services
-git clone https://github.com/nikunjness/mongo-ambari.git   
+git clone https://github.com/skylerb/mongo-ambari.git
 ```
 
 ####Restart Ambari
