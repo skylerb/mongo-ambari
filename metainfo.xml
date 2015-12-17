@@ -6,7 +6,7 @@
             <name>MONGODB</name>
             <displayName>MongoDB</displayName>
             <comment>MongoDB is a cross-platform document-oriented database.</comment>
-            <version>3.0</version>
+            <version>3.2</version>
             <components>
                     <component>
                     <name>MONGODB_MASTER</name>
