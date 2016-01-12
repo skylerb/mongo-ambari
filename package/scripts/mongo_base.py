@@ -40,7 +40,7 @@ class MongoBase(Script):
         import params
 
         env.set_params(params)
-        if not os.path.exist(params.db_path):
+        if not os.path.exists(params.db_path):
             Directory([params.db_path],
           	  owner=params.mongo_user,
           	  group=params.mongo_group,
