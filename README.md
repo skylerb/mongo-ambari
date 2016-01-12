@@ -16,7 +16,7 @@ ssh root@ambari.machine
 
 ####To deploy the Mongo DB, run below
 ```
-cd /var/lib/ambari-server/resources/stacks/HDP/2.2/services
+cd /var/lib/ambari-server/resources/stacks/HDP/2.3/services
 git clone https://github.com/skylerb/mongo-ambari.git MONGO
 ```
 
@@ -78,7 +78,7 @@ curl -u admin:$PASSWORD -i -H 'X-Requested-By: ambari' -X PUT -d '{"RequestInfo"
   - Remove artifacts 
   
     ```
-    rm -rf /var/lib/ambari-server/resources/stacks/HDP/2.2/services/mongo-ambari
+    rm -rf /var/lib/ambari-server/resources/stacks/HDP/2.3/services/mongo-ambari
     ```
   - Restart Ambari
     ```
