@@ -31,6 +31,8 @@ class MongoBase(Script):
         import params
 
         env.set_params(params)
+        if not os.path.exist(params.db_path):
+            Execute('mkdir -p ' + params.db_path)
         File(self.config_file_path,
              content=Template("mongod.conf.j2"),
              mode=0644
