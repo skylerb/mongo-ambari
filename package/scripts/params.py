@@ -4,9 +4,6 @@ import os
 
 config = Script.get_config()
 
-mongo_user = default('configurations/mongodb/mongo_user', 'root')
-mongo_group = default('configurations/mongodb/mongo_group','root')
-
 db_path = default('configurations/mongodb/db_path', '/data/mongo')
 bind_ip = default('configurations/mongodb/bind_ip', '0.0.0.0')
 tcp_port = default('configurations/mongodb/tcp_port', '27017')
