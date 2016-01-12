@@ -37,6 +37,7 @@
                     </packages>
                 </osSpecific>
             </osSpecifics>
+            <restartRequiredAfterChange>true</restartRequiredAfterChange>
         </service>
     </services>
 </metainfo>
