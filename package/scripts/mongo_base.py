@@ -14,9 +14,9 @@ class MongoBase(Script):
 
         self.install_packages(env)
         self.create_linux_user(params.mongo_user, params.mongo_group)
-  	    if params.mongo_user != 'root':
-  		    Execute('cp /etc/sudoers /etc/sudoers.bak')
-  		    Execute('echo "'+params.mongo_user+' ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers')
+  	if params.mongo_user != 'root':
+  		Execute('cp /etc/sudoers /etc/sudoers.bak')
+  		Execute('echo "'+params.mongo_user+' ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers')
         if os.path.exists(self.repos_file_path):
             print "File exists"
         else:
