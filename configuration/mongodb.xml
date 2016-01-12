@@ -4,7 +4,7 @@
 <configuration>
     <property>
         <name>db_path</name>
-        <value>/var/lib/mongo</value>
+        <value>/data/mongo</value>
         <description>
             Path where the mongodb is stored.
         </description>
@@ -34,6 +34,11 @@
             Port on which mongod listens for incoming client connections.
             The Web Status page is always 1000 higher than this port number
         </description>
+    </property>
+    <property>
+        <name>log_path</name>
+        <value>/var/log/mongodb/mongod.log</value>
+        <description>Log path for MongoDB</description>
     </property>
     <property>
         <name>mongo_host</name>
