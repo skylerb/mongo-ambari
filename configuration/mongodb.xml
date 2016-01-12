@@ -10,6 +10,13 @@
         </description>
     </property>
     <property>
+        <name>db_auth</name>
+        <value>false</value>
+        <description>
+            Turn On/Off Security
+        </description>
+    </property>
+    <property>
         <name>bind_ip</name>
         <value>0.0.0.0</value>
         <description>
