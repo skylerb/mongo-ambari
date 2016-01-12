@@ -1,4 +1,4 @@
-import os, pwd
+import os, pwd, grp
 
 from resource_management import *
 
