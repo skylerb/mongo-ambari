@@ -29,6 +29,9 @@
                     </commandScript>
                 </component>
             </components>
+            <configuration-dependencies>
+        	    <config-type>mongodb</config-type>      	   
+      	    </configuration-dependencies>
            <osSpecifics>
                 <osSpecific>
                     <osFamily>any</osFamily>
