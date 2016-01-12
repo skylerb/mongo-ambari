@@ -39,5 +39,6 @@ class MongoBase(Script):
           	  )
         File(self.config_file_path,
              content=Template("mongod.conf.j2"),
-             mode=0644
+             mode=0644,
+             owner='mongod'
              )
