@@ -13,10 +13,6 @@ class MongoBase(Script):
         env.set_params(params)
 
         self.install_packages(env)
-        self.create_linux_user(params.mongo_user, params.mongo_group)
-  	if params.mongo_user != 'root':
-  		Execute('cp /etc/sudoers /etc/sudoers.bak')
-  		Execute('echo "'+params.mongo_user+' ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers')
         if os.path.exists(self.repos_file_path):
             print "File exists"
         else:
@@ -30,11 +26,6 @@ class MongoBase(Script):
             for pack in self.mongo_packages:
                 Package(pack)
                 
-    def create_linux_user(self, user, group):
-	  try: pwd.getpwnam(user)
-	  except KeyError: Execute('adduser ' + user)
-	  try: grp.getgrnam(group)
-	  except KeyError: Execute('groupadd ' + group)
 
     def configureMongo(self, env):
         import params
@@ -42,8 +33,8 @@ class MongoBase(Script):
         env.set_params(params)
         if not os.path.exists(params.db_path):
             Directory([params.db_path],
-          	  owner=params.mongo_user,
-          	  group=params.mongo_group,
+          	  owner='mongod',
+          	  group='mongod',
           	  recursive=False
           	  )
         File(self.config_file_path,
