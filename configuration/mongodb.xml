@@ -3,6 +3,16 @@
 
 <configuration>
     <property>
+        <name>mongo_user</name>
+        <value>mongo</value>
+        <description>MongoDB User</description>
+    </property>
+    <property>
+        <name>mongo_group</name>
+        <value>mongo</value>
+        <description>MongoDB Group</description>
+    </property>
+    <property>
         <name>db_path</name>
         <value>/data/mongo</value>
         <description>
