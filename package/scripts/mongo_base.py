@@ -37,6 +37,7 @@ class MongoBase(Script):
           	  group='mongod',
           	  recursive=False
           	  )
+        Execute('rm ' + self.config_file_path)
         File(self.config_file_path,
              content=Template("mongod.conf.j2"),
              mode=0644,
