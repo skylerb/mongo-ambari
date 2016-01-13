@@ -38,6 +38,7 @@ class MongoBase(Script):
           	  recursive=False
           	  )
         Execute('rm ' + self.config_file_path)
+        print 'Updating mongod config file...'
         File(self.config_file_path,
              content=Template("mongod.conf.j2"),
              mode=0644,
