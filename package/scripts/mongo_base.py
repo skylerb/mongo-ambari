@@ -37,7 +37,6 @@ class MongoBase(Script):
           	  group='mongod',
           	  recursive=False
           	  )
-        Execute('rm ' + self.config_file_path)
         print 'Updating mongod config file...'
         File(self.config_file_path,
              content=Template("mongod.conf.j2"),
