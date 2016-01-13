@@ -19,8 +19,7 @@ class MongoMaster(MongoBase):
 
     def start(self, env):
         import params
-        env.set_params(params)
-        self.configureMongo(env)
+        self.configure(env)
         print "start mongodb"
         Execute('service mongod start > /dev/null ')
 
@@ -30,8 +29,7 @@ class MongoMaster(MongoBase):
 
     def restart(self, env):
         import params
-        env.set_params(params)
-        self.configureMongo(env)
+        self.configure(env)
         print "restart mongodb"
         Execute('service mongod restart > /dev/null ')
 
