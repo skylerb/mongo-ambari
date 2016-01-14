@@ -42,6 +42,7 @@
             </osSpecifics>
             <restartRequiredAfterChange>true</restartRequiredAfterChange>
             <metricsFileName>metrics.json</metricsFileName>
+            <widgetsFileName>widgets.json</widgetsFileName>
         </service>
     </services>
 </metainfo>
