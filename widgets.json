@@ -1,0 +1,35 @@
+{
+  "layouts": [
+    {
+      "layout_name": "default_mongodb_dashboard",
+      "display_name": "Standard MongoDB Dashboard",
+      "section_name": "MONGODB_SUMMARY",
+      "widgetLayoutInfo": [
+            {
+                 "widget_name": "Terminated Threads",
+                 "description": "Number of terminated threads in the JVM.",
+                 "widget_type": "GRAPH",
+                 "is_visible": false,
+                 "metrics": [
+                   {
+                     "name": "jvm.thread_states.terminated",
+                     "metric_path": "metrics/jvm/thread_states/terminated",
+                     "service_name": "MONGODB",
+                     "component_name": "MONGODB_MASTER"
+                   }
+                 ],
+                 "values": [
+                   {
+                     "name": "Terminated Threads",
+                     "value": "${jvm.thread_states.terminated}"
+                   }
+                 ],
+                 "properties": {
+                   "graph_type": "LINE",
+                   "time_range": "1"
+                 }
+            }
+      ]
+    }
+  ]
+}
